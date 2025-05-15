@@ -19,19 +19,24 @@ Select ONE Additional Feature to Add
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+     .decleration{
+      font: italic 15px fantasy;
+        }
+    </style>
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1 class= "decleration"> Quiz About Alannah N. Vass</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+      <div class= ".🎥What is my favorite movie?">
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">After</option>
+          <option value="movie2">Waves</option>
+          <option value="movie3">Twighlight</option>
+          <option value="movie4">It Ends With Us</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
@@ -40,20 +45,32 @@ Select ONE Additional Feature to Add
     <hr />
     <!-- Book Question -->
     <form id="book-form">
-      <label>
-        📖 What is my favorite book?
+      <label class= "quote">
+         📖What is my favorite Netflix Series?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">You</option>
+          <option value="book2">Never Have I Ever</option>
+          <option value="book3">On My Block</option>
+          <option value="book4">13 Reasons Why</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
     </form>
     <div id="book-result"></div>
+ 
+    <img id="Waves" src= "https://images.squarespace-cdn.com/content/v1/5d2560df05fa7f00014d3b29/1576891400618-0118WXU6SUVLYSCT2RWH/Waves+1.png" width="350">
+
+    <img id="Netflix" src= "https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940" width="350">
+    
+   
+<img id="You" src= "https://news.newonnetflix.info/wp-content/uploads/2018/10/you-poster.jpg" width="350">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
+    <script> 
+       $("#Waves").hide()
+       $("#Netflix").hide()
+       $("#You").hide()
+    
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -61,8 +78,9 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
+        if (answer === "movie2") {
           $("#movie-result").text("YESSSS!");
+          $("#Waves").slideDown(2000)
         } else {
           $("#movie-result").text("Try Again!");
         }
@@ -77,6 +95,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "book1") {
           $("#book-result").text("YESSSS!");
+          $("#You").fadeIn(2000)
         } else {
           $("#book-result").text("Try Again!");
         }
