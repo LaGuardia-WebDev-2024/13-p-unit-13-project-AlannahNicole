@@ -20,3 +20,22 @@ hr {
   height: 5px;
   background-color: black;
 }
+
+
+@font-face {
+font-family: gradeur;
+src: url(https://cdn.glitch.global/509f19f6-5aa5-4339-af5b-e12791595c3c/Gradeur%20DEMO%20VERSION.ttf?v=1747228749149)
+}
+
+
+html{
+font-family: gradeur;
+}
+.decleration { 
+font: italic 15px fantasy;
+}
+.quote {
+font-style: italic;
+font-size: 12px;
+font-family: cursive;
+}
